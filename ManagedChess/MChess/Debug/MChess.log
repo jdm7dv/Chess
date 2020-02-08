@@ -1,0 +1,31 @@
+﻿Build started 12/17/2012 5:33:35 PM.
+     1>Project "C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\ManagedChess\MChess\MChess.vcxproj" on node 4 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\..\CHESS /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.0\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib AssemblyInfo.cpp ManagedChess.cpp NativeWrappers.cpp ..\..\version.cpp
+         AssemblyInfo.cpp
+         ManagedChess.cpp
+         NativeWrappers.cpp
+         version.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\..\CHESS /Zi /clr /nologo /W3 /WX /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /analyze- /errorReport:prompt "C:\Users\Jonathan_Moore\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\Debug\Microsoft.ManagedChess.MChess.dll" /INCREMENTAL /NOLOGO ..\..\debug\chess.lib /MANIFEST /ManifestFile:"Debug\Microsoft.ManagedChess.MChess.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\Debug\Microsoft.ManagedChess.MChess.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE:NO /FIXED:NO /MACHINE:X86 /PROFILE /SAFESEH /ASSEMBLYLINKRESOURCE:"..\..\debug\Chess.dll" /DLL Debug\AssemblyInfo.obj
+         Debug\ManagedChess.obj
+         Debug\NativeWrappers.obj
+         Debug\version.obj
+         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+         "C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\Debug\Chess.lib"
+     1>LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/PROFILE' specification
+            Creating library C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\Debug\Microsoft.ManagedChess.MChess.lib and object C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\Debug\Microsoft.ManagedChess.MChess.exp
+         MChess.vcxproj -> C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\Debug\Microsoft.ManagedChess.MChess.dll
+       Manifest:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\mt.exe /nologo /verbose /out:"C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\Debug\Microsoft.ManagedChess.MChess.dll.manifest" /manifest Debug\Microsoft.ManagedChess.MChess.dll.intermediate.manifest
+       PostBuildEvent:
+         rem sn.exe -Ra "C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\Debug\Microsoft.ManagedChess.MChess.dll" "C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\ManagedChess\MChess\ManagedChess.snk"
+         :VCEnd
+     1>Done Building Project "C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\ManagedChess\MChess\MChess.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.87
