@@ -1,18 +1,9 @@
-﻿Build started 12/17/2012 5:33:59 PM.
-     1>Project "C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\Win32Chess\Win32W2k3Wrappers\Win32W2k3Wrappers.vcxproj" on node 5 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\..\chess /I.. /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D WIN32W2K3WRAPPERS_EXPORTS /D _WINDLL /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Win32W2k3Wrappers.cpp
-         Win32W2k3Wrappers.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\Debug\Win32W2k3Wrappers.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\Debug\Win32W2k3Wrappers.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\Debug\Win32W2k3Wrappers.lib" /MACHINE:X86 /PROFILE /SAFESEH /DLL Debug\Win32W2k3Wrappers.obj
-         "C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\Debug\Chess.lib"
-         "C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\Debug\Win32Chess.lib"
-     1>LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/PROFILE' specification
-     1>Win32W2k3Wrappers.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
-            Creating library C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\Debug\Win32W2k3Wrappers.lib and object C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\Debug\Win32W2k3Wrappers.exp
-         Win32W2k3Wrappers.vcxproj -> C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\Debug\Win32W2k3Wrappers.dll
-     1>Done Building Project "C:\Users\Jonathan_Moore\Documents\Visual Studio 2012\Projects\Concurrent\CHESS\Win32Chess\Win32W2k3Wrappers\Win32W2k3Wrappers.vcxproj" (Build target(s)).
+﻿Build started 2/12/2020 9:47:34 PM.
+     1>Project "D:\Microsoft\VERVE\CHESS\Win32Chess\Win32W2k3Wrappers\Win32W2k3Wrappers.vcxproj" on node 2 (clean target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\Win32W2k3Wrappers.lastbuildstate".
+     1>Done Building Project "D:\Microsoft\VERVE\CHESS\Win32Chess\Win32W2k3Wrappers\Win32W2k3Wrappers.vcxproj" (clean target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.45
+Time Elapsed 00:00:00.01
