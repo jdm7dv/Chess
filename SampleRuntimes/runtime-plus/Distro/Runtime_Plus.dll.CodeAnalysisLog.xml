@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="E:\msvc_ide\iisroot\Github\jdm7dv\runtime-plus\Distro\Runtime_Plus.dll">
+   <Modules>
+    <Module Name="runtime_plus.dll">
+     <Namespaces>
+      <Namespace Name="System.Extensions">
+       <Types>
+        <Type Name="DataCancelEventHandler`1" Kind="Delegate" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="UseGenericEventHandlerInstances" Category="Microsoft.Design" CheckId="CA1003" Status="ExcludedInSource" Created="2019-04-22 18:46:49Z" FixCategory="Breaking" LastSeen="0001-01-01 00:00:00Z">
+           <Notes>
+            <User Name="[SuppressMessage]">
+             <Note Id="4" />
+            </User>
+           </Notes>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DataEventHandler`1" Kind="Delegate" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="UseGenericEventHandlerInstances" Category="Microsoft.Design" CheckId="CA1003" Status="ExcludedInSource" Created="2019-04-22 18:46:49Z" FixCategory="Breaking" LastSeen="0001-01-01 00:00:00Z">
+           <Notes>
+            <User Name="[SuppressMessage]">
+             <Note Id="5" />
+            </User>
+           </Notes>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="NativeMethods" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#SHAddToRecentDocs(System.UInt32,System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2019-04-22 18:46:49Z" FixCategory="NonBreaking">
+             <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">To reduce security risk, marshal parameter 'pv' as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SingleProgramInstance" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#IsIconic(System.IntPtr)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2019-04-22 18:46:49Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'SingleProgramInstance.IsIconic(IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetForegroundWindow(System.IntPtr)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2019-04-22 18:46:49Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'SingleProgramInstance.SetForegroundWindow(IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ShowWindowAsync(System.IntPtr,System.Int32)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2019-04-22 18:46:49Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'SingleProgramInstance.ShowWindowAsync(IntPtr, int)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Stopwatch" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#QueryPerformanceCounter(System.Int64&amp;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2019-04-22 18:46:49Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'Stopwatch.QueryPerformanceCounter(ref long)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2019-04-22 18:46:49Z" FixCategory="NonBreaking">
+             <Issue Name="Return" Certainty="95" Level="Error">As it is declared in your code, the return type of P/Invoke 'Stopwatch.QueryPerformanceCounter(ref long)' will be 2 bytes wide on 32-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 4 bytes wide on 32-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'short'.</Issue>
+             <Issue Name="Return" Certainty="95" Level="Error">As it is declared in your code, the return type of P/Invoke 'Stopwatch.QueryPerformanceCounter(ref long)' will be 2 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 4 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'short'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#QueryPerformanceFrequency(System.Int64&amp;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2019-04-22 18:46:49Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'Stopwatch.QueryPerformanceFrequency(ref long)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2019-04-22 18:46:49Z" FixCategory="NonBreaking">
+             <Issue Name="Return" Certainty="95" Level="Error">As it is declared in your code, the return type of P/Invoke 'Stopwatch.QueryPerformanceFrequency(ref long)' will be 2 bytes wide on 32-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 4 bytes wide on 32-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'short'.</Issue>
+             <Issue Name="Return" Certainty="95" Level="Error">As it is declared in your code, the return type of P/Invoke 'Stopwatch.QueryPerformanceFrequency(ref long)' will be 2 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 4 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'short'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="System.Extensions.CodeDom">
+       <Types>
+        <Type Name="CodeGenerator" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2019-04-22 18:46:49Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implement IDisposable on 'CodeGenerator' because it creates members of the following IDisposable types: 'CSharpCodeProvider'. If 'CodeGenerator' has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="ParameterDeclaration" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2019-04-22 18:46:49Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implement IDisposable on 'ParameterDeclaration' because it creates members of the following IDisposable types: 'StringWriter'. If 'ParameterDeclaration' has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="SnippetExpression" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2019-04-22 18:46:49Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implement IDisposable on 'SnippetExpression' because it creates members of the following IDisposable types: 'StringWriter', 'IndentedTextWriter'. If 'SnippetExpression' has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="System.Extensions.CodeDom.Doc">
+       <Types>
+        <Type Name="TypeFinder" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AddAssembly(System.Reflection.Assembly)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotLockOnObjectsWithWeakIdentity" Category="Microsoft.Reliability" CheckId="CA2002" Status="Active" Created="2019-04-22 18:46:49Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalError" Path="E:\msvc_ide\iisroot\Github\jdm7dv\runtime-plus\Windows\Runtime\CodeDom\Doc" File="TypeFinder.cs" Line="69">'TypeFinder.AddAssembly(Assembly)' locks on a reference of type 'Type'. Replace this with a lock against an object with strong-identity.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AddImports(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotLockOnObjectsWithWeakIdentity" Category="Microsoft.Reliability" CheckId="CA2002" Status="Active" Created="2019-04-22 18:46:49Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalError" Path="E:\msvc_ide\iisroot\Github\jdm7dv\runtime-plus\Windows\Runtime\CodeDom\Doc" File="TypeFinder.cs" Line="57">'TypeFinder.AddImports(string)' locks on a reference of type 'Type'. Replace this with a lock against an object with strong-identity.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="System.Extensions.Data">
+       <Types>
+        <Type Name="IDataReaderExtensions" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetFloat(System.Data.IDataRecord,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="float" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Status="ExcludedInSource" Created="2019-04-22 18:46:49Z" FixCategory="Breaking" LastSeen="0001-01-01 00:00:00Z">
+             <Notes>
+              <User Name="[SuppressMessage]">
+               <Note Id="6" />
+              </User>
+             </Notes>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="IDbCommandExtensions" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="Db" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="ExcludedInSource" Created="2019-04-22 18:46:49Z" FixCategory="Breaking" LastSeen="0001-01-01 00:00:00Z">
+           <Notes>
+            <User Name="[SuppressMessage]">
+             <Note Id="7" />
+            </User>
+           </Notes>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="IDbConnectionExtensions" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="Db" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="ExcludedInSource" Created="2019-04-22 18:46:49Z" FixCategory="Breaking" LastSeen="0001-01-01 00:00:00Z" />
+         </Messages>
+         <Members>
+          <Member Name="#CreateCommand(System.Data.IDbConnection,System.String,System.Data.CommandType)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-04-22 18:46:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="E:\msvc_ide\iisroot\Github\jdm7dv\runtime-plus\Windows\Runtime\Data" File="IDbConnectionExtensions.cs" Line="55">The query string passed to 'IDbCommand.CommandText.set(string)' in 'IDbConnectionExtensions.CreateCommand(this IDbConnection, string, CommandType)' could contain the following variables 'commandText'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="System.Extensions.Properties">
+       <Types>
+        <Type Name="Resources" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="ExcludedInSource" Created="2019-04-22 18:46:49Z" FixCategory="NonBreaking" LastSeen="0001-01-01 00:00:00Z" />
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Notes>
+  <User Name="[SuppressMessage]">
+   <Note Id="4" Modified="2019-04-22 18:46:49Z">Without this delegate, usage would require double nesting of generics.</Note>
+   <Note Id="5" Modified="2019-04-22 18:46:49Z">Without this delegate, usage would require double nesting of generics.</Note>
+   <Note Id="6" Modified="2019-04-22 18:46:49Z">Named to be consistent with method we're overloading.</Note>
+   <Note Id="7" Modified="2019-04-22 18:46:49Z">Modeling the poorly cased .NET BCL</Note>
+  </User>
+ </Notes>
+ <Rules>
+  <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+   <Name>Avoid uncalled private code</Name>
+   <Description>There is uncalled code that is not externally visible and is not a known runtime entry point. If this violation fires in error, please send a problem report to the Visual Studio Code Analysis team.</Description>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182264.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotLockOnObjectsWithWeakIdentity" Category="Microsoft.Reliability" CheckId="CA2002">
+   <Name>Do not lock on objects with weak identity</Name>
+   <Description>Don't take locks on objects that may bleed across AppDomains or that don't have a strong identity.</Description>
+   <Resolution Name="Default">{0} locks on a reference of type {1}. Replace this with a lock against an object with strong-identity.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182290.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalError</MessageLevel>
+   <File Name="reliabilityrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>Identifiers should be cased correctly</Name>
+   <Description>Type, namespace, and member identifiers are Pascal-cased. Parameter identifiers are camel-cased. Two letter acronyms within these identifiers should be upper-cased, for example, use System.IO instead of System.Io. Acronyms of three or more letters should be Pascal-cased, for example, use System.Xml instead of System.XML. The pascal-casing convention capitalizes the first letter of each word, as in BackColor. The camel-casing convention formats the first letter of the first word in lowercase and capitalizes the first letter of all subsequent words, as in backgroundColor. Although it may be common practice for some two letter acronyms to not be fully capitalized, violations of this rule should not be excluded for this reason. For example, 'DbConnection', is common but incorrect; use DBConnection. A violation of this rule might be required for compatibility with existing, non-managed symbol schemes. In general, however, these symbols should not be visible outside the assembly that uses them.</Description>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720">
+   <Name>Identifiers should not contain type names</Name>
+   <Description>Avoid using language-specific types name in parameters and members and data type identifiers in parameters. Types names might not be intuitive for all developers. It is recommended that you select a generic name, such as 'value', instead. If this is not sufficient, be sure to use the type name as it is defined in the .NET Framework Library and avoid language-specific type names completely. Some examples of C#-specific type names are 'float' (use 'Single' if a generic name is not sufficient), and 'ulong' (use 'UInt64' if a generic name is not sufficient).</Description>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb531486.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060">
+   <Name>Move P/Invokes to NativeMethods class</Name>
+   <Description>This type contains members with the DllImport attribute. Members with the DllImport attribute should be contained in classes named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Description>
+   <Resolution Name="Default">Because it is a P/Invoke method, {0} should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182161.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalWarning</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901">
+   <Name>P/Invoke declarations should be portable</Name>
+   <Description>.</Description>
+   <Resolution Name="Return">As it is declared in your code, the return type of P/Invoke {0} will be {1} bytes wide on {2} platforms. This is not correct, as the actual native declaration of this API indicates it should be {3} bytes wide on {2} platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of {4}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182284(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="portabilityrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>Review SQL queries for security vulnerabilities</Name>
+   <Description>A SQL command string built from user input is vulnerable to SQL injection attacks. Microsoft SQL Server and other database servers support stored procedures and parameterized SQL queries, which reduce the risk of injection attacks.</Description>
+   <Resolution Name="WithNonLiterals">The query string passed to {0} in {1} could contain the following variables {2}. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101">
+   <Name>Specify marshaling for P/Invoke string arguments</Name>
+   <Description>When marshaling strings as ANSI (or as Auto on Win9x), some characters may be changed. If best-fit mapping is on, strings that appear different in Unicode will be marshaled to identical ANSI strings, which may lead to incorrect security decisions. Turning best-fit mapping off reduces this risk, as all characters without equivalents are mapped to '?'. Also, note that CharSet.Ansi is the default setting for all string marshaling; Unicode marshaling must be specified explicitly, either as a CharSet setting of DllImport or StructLayout, or as a MarshalAs attribute with a Unicode (or system-dependent) UnmanagedType.</Description>
+   <Resolution Name="ParameterImplicitAnsi">To reduce security risk, marshal parameter {0} as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182319.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>Types that own disposable fields should be disposable</Name>
+   <Description>Types that declare disposable members should also implement IDisposable. If the type does not own any unmanaged resources, do not implement a finalizer on it.</Description>
+   <Resolution Name="DependsOnFix">Implement IDisposable on {0} because it creates members of the following IDisposable types: {1}. If {0} has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="UseGenericEventHandlerInstances" Category="Microsoft.Design" CheckId="CA1003">
+   <Name>Use generic event handler instances</Name>
+   <Description>Do not declare new delegates to be used as event handlers when targeting a version of the .NET Framework that supports generics. Use an instance EventHandler&lt;T&gt; instead.</Description>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182178.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>
